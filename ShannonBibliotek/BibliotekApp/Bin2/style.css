@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.sidebar {
+  width: 20vw;
+  height: 100vh;
+  display: block;
+  position: flex;
+  background: #444;
+  transition: 1s ease;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.container {
+  width: 100vw;
+  height: 80vh;
+  background-color: #555;
+  padding: 2em;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  width: 75%;
+  padding: 5px;
+  margin: 10px;
+  display: block;
+}
+form input.input-button {
+  width: 30%;
+}
+
+.todos {
+  margin-top: 2em;
+  overflow: scroll;
+}
+
+.todo {
+  border-left: 4px solid #ec5766;
+  width: 100%;
+  padding: 5px;
+  color: #bbb;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.delete {
+  border: solid 2px #000;
+  border-radius: 10px;
+  font-size: 24px;
+  color: #d91e36;
+  cursor: pointer;
+}
+
+progress {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  width: 60vw;
+  height: 50px;
+  border: 1px solid #000;
+}
+progress[value] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  --w: 60vw;
+  --color: linear-gradient(90deg, #ff6161, #1ecd1e) 0 / var(--w); /* the progress color */
+  --background: lightgrey; /* the background color */
+
+  border: 2px solid #000; /* Firefox add a default border */
+  border-radius: 10em;
+  background: var(--background);
+}
+
+progress[value]::-moz-progress-bar {
+  border-radius: 10em;
+  background: var(--color);
+}
+
+progress[value]::-webkit-progress-bar {
+  border-radius: 10em;
+  background: var(--background);
+}
+progress[value]::-webkit-progress-value {
+  border-radius: 10em;
+  background: var(--color);
+}
+
+.line-between-tags {
+  margin-top: 10px;
+  border-bottom: 2px solid #222;
+  margin-bottom: 10px; /* Optional: Adjust spacing between elements */
+}
